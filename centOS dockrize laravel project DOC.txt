@@ -1,0 +1,98 @@
+
+Docker install in cent OS server:
+
+ref url:https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-centos-7
+
+1.sudo yum check-update
+
+2.curl -fsSL https://get.docker.com/ | sh
+
+3.sudo systemctl start docker
+
+4.sudo systemctl status docker
+
+5.sudo systemctl enable docker
+
+6.sudo usermod -aG docker $(whoami)
+
+7.sudo usermod -aG docker username
+
+8.docker
+
+9.docker info
+
+10.docker run hello-world
+
+11.docker pull centos
+
+12.docker run centos
+
+13.docker images
+
+14.docker run -it centos
+
+15.exit
+
+16.docker ps
+
+17.docker ps -a
+
+18.docker ps -l
+
+19.docker stop container-id
+
+
+
+php & composer setup in cent os server
+
+ref url:https://computingforgeeks.com/how-to-install-php-centos-rhel-linux/
+
+1.sudo yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+2.sudo yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+3.sudo yum -y install yum-utils
+
+4.sudo yum-config-manager --disable 'remi-php*'
+
+5.sudo yum-config-manager --enable remi-php81
+
+6.sudo yum repolist
+
+7.sudo yum -y install php php-{cli,fpm,mysqlnd,zip,devel,gd,mbstring,curl,xml,pear,bcmath,json,opcache,redis,memcache}
+
+8.php -v
+
+9.php -m
+
+10.cd test
+
+11.composer install
+
+12.composer require laravel/sail --dev
+
+13.php artisan sail:install
+
+14.docker-compose build
+
+
+
+
+
+Docker-compose install 
+
+1.cd /usr/local/bin
+
+2.curl -SL https://github.com/docker/compose/releases/download/v2.11.0/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
+
+3.sudo chmod +x /usr/local/bin/docker-compose
+
+4.sudo docker-compose --version
+
+5.then go to project directory
+
+6.first of all check the .env file is exist or not.
+if not exist then create a .env file and paste from project code
+
+7.docker-compose up -d  OR docker-compose build
+
